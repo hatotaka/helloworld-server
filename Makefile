@@ -1,7 +1,7 @@
 DOCKER_USER?=$(shell whoami)
 DOCKER_REGISTRY?=docker.io
 
-IMAGE_NAME=${DOCKER_USER}/hello-world
+IMAGE_NAME=${DOCKER_USER}/helloworld-server
 
 all: build-linux build-docker
 
