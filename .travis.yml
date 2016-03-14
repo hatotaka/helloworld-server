@@ -1,0 +1,13 @@
+sudo: require
+
+language: go
+
+services:
+ - docker
+
+before_script:
+ - docker login --email "${DOCKER_EMAIL}" --password "${DOCKER_PASSWORD}" --username "${DOCKER_USER}"
+
+script:
+  - make
+  - make push
